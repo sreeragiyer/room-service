@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+    xmlns:th="http://www.thymeleaf.org" 
+    xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3"
+    xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1> Total cost</h1>
+<h3 th:text= "'room cost '+${rsm.cost}"></h3>
+<!-- <ul th:each="service : ${rsm.services}">
+    <li th:text="${service}"></li>
+</ul> -->
+<h3>Cost of each service</h3>
+<ul th:each="eachcost : ${rsm.serviceCost}">
+    <li th:text="${eachcost}"></li>
+</ul>
+</body>
+</html>
